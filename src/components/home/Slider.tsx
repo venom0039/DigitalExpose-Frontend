@@ -7,6 +7,10 @@ export default function Slider(){
 
     useEffect(() => {
         fetchAllBill();
+
+        const id = setTimeout(() => {
+            plusSlides(1);
+        }, 8000)
     },[]);
 
     function fetchAllBill(){

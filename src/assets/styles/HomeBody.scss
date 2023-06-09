@@ -1,0 +1,6 @@
+@use 'variables/colour.scss' as colour;
+
+.sideMenu {
+    background: colour.$yellow-100;
+    height: 50vh;
+}
