@@ -1,0 +1,71 @@
+.dpSet {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+
+.navBody {
+    background-color: rgba($color: #ddd, $alpha: 0.05);
+    border: 0px solid #000;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding-bottom: 0px;
+}
+
+.logotextShadow {
+    background-color: rgba($color: #fff, $alpha: 0.35);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 250px;
+}
+
+.activeNav .deactiveNav {
+    border-color: #facc15;
+}
+
+.activeNav::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #facc15;
+    transition: width 0.2s ease-in-out;
+}
+
+.deactiveNav::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #facc15;
+}
+
+.deactiveNav:hover::after {
+    content: '';
+    width: 75%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #facc15;
+    transition: width 0.3s ease-in-out;
+}
+
+.navItem {
+    color: #facc15;
+    font-weight: 300;
+
+    &:hover {
+        font-weight: 600;
+    }
+}
