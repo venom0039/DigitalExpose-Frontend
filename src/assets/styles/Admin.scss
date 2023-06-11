@@ -1,0 +1,10 @@
+@use "./variables/colour" as colour;
+
+.sliderBackground {
+    background-color: colour.$slate-800;
+}
+
+.adminBody {
+    padding: 25px;
+    background-color: colour.$slate-500;
+}

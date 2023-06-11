@@ -6,17 +6,15 @@ export default axios.create({
 })
 
 function authReturn(){
-    var dt = {};
-
     if(localStorage.getItem('token') !== undefined && localStorage.getItem('token') !== ""){
-        return dt = {
+        return {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
             'Authorization': "Bearer " + localStorage.getItem('token')
         }
     }
     else{
-        return dt = {
+        return {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         }
