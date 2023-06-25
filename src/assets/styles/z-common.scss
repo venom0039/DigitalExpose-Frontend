@@ -1,0 +1,27 @@
+@use "./variables/colour.scss" as colour;
+
+@mixin btn-round() {
+    border: 0px;
+    border-radius: 9999px;
+    padding: 10px 25px;
+}
+
+.btn-green {
+    @include btn-round();
+    background-color: colour.$emerald-600;
+    color: white;
+
+    &:hover {
+        box-shadow: 0px 0px 10px colour.$emerald-400;
+    }
+}
+
+.btn-yellow {
+    @include btn-round();
+    background-color: colour.$yellow-400;
+    color: white;
+
+    &:hover {
+        box-shadow: 0px 0px 10px colour.$yellow-200;
+    }
+}

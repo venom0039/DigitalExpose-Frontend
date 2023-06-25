@@ -8,10 +8,10 @@ export default function Slider(){
     useEffect(() => {
         fetchAllBill();
 
-        const id = setTimeout(() => {
+        setTimeout(() => {
             plusSlides(1);
         }, 8000)
-    },[]);
+    }, []);
 
     function fetchAllBill(){
         Services.slideshow().then(({data}: any)=>{

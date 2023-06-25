@@ -21,6 +21,15 @@ class Services{
     adminRefresh(){
         return httpCommon.get("/auth/admin/refresh")
     }
+
+    // Post
+    postPosts(data: any){
+        return httpCommon.post("/auth/post/create", data);
+    }
+
+    updatePosts(data: any){
+        return httpCommon.put("/auth/post/update", data);
+    }
 }
 
 export default new Services();
